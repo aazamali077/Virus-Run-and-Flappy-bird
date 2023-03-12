@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject GameOverUI;
-    public TextMeshProUGUI Score_Text;
+    public TextMeshProUGUI Score_Text, Game_Over_Score;
     private float score;
     void Start()
     {
@@ -20,11 +20,13 @@ public class GameManager : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player") == null)
         {
             GameOverUI.SetActive(true);
+            Score_Text.gameObject.SetActive(false);
         }
         else if (GameObject.FindGameObjectWithTag("Player")!=null)
         {
             score += 1 * Time.deltaTime;
             Score_Text.text = ((int)score).ToString();
+            Game_Over_Score.text = ((int)score).ToString();
         }
     }
 
