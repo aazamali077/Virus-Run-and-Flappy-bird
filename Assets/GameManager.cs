@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void ReloadScene()
+    public void ReloadScene(int index)
     {
-        SceneManager.LoadScene("Virus run");
+        SceneManager.LoadScene(index);
     }
 }

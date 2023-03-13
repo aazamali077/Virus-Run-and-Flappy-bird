@@ -7,13 +7,7 @@ public class ObstacleS : MonoBehaviour
     public GameObject obstacle;
     public float maxX, minX, maxY, minY, timeBetweenspawn;
     private float spawnTime;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time>spawnTime)
